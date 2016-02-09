@@ -14,15 +14,17 @@ class StoryMedia extends React.Component {
   }
 
   renderImages () {
-    var images = [];
-    this.props.story.images.forEach((image, index) => (
-      images.push (
-        <img
-          width="300px"
-          src={image}
-          key={index} />
-      )));
-    return images;
+    let images = [];
+    this.props.story.images.map( image => images.push({src: image}) )
+    return (
+      <Lightbox
+        images={images}
+        isOpen={this.state.lightboxIsOpen}
+        onClickPrev={this.gotoPrevious}
+        onClickNext={this.gotoNext}
+        onClose={this.closeLightbox}
+      />
+    );
   }
 
   renderVideo () {
