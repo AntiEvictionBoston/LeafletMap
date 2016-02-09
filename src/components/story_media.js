@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import YouTube from "react-youtube";
+import Lightbox from "react-images";
 
 class StoryMedia extends React.Component {
   render () {
