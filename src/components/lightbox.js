@@ -1,19 +1,58 @@
 import React from "react";
-import Lightbox from 'react-images';
+import Lightbox from "react-images";
+import { render } from "react-dom";
 
-class EvictionPhotos extends React.Component {
-  static propTypes = {
-    images: React.PropTypes.array.isRequired
+class StoryLightbox extends React.Component {
+  constructor () {
+    super();
+    this.state = {
+      lightboxIsOpen: false,
+      currentImage: 0
+    };
+    this.closeLightbox = this.closeLightbox.bind(this);
+    this.gotoNext = this.gotoNext.bind(this);
+    this.gotoPrevious = this.gotoPrevious.bind(this);
+    this.openLightbox = this.openLightbox.bind(this);
   }
 
-  constructor (options) {
-    super(options);
+  static propTypes = {
+    images:     React.PropTypes.array.isRequired
+  };
+
+  openLightbox (index, event) {
+    event.preventDefault();
+    this.setState({
+      currentImage: index,
+      lightboxIsOpen: true,
+    });
+  }
+
+  closeLightbox () {
+    this.setState({
+      currentImage: 0,
+      lightboxIsOpen: false,
+    });
+  }
+
+  gotoPrevious () {
+    this.setState({
+      currentImage: this.state.currentImage - 1,
+    });
+  }
+
+  gotoNext () {
+    this.setState({
+      currentImage: this.state.currentImage + 1,
+    });
   }
 
   render () {
+    let lightboxImages = [];
+    this.props.images.map(image => lightboxImages.push({src: image}));
     return (
       <Lightbox
-        images={this.props.images}
+        currentImage={this.state.currentImage}
+        images={lightboxImages}
         isOpen={this.state.lightboxIsOpen}
         onClickPrev={this.gotoPrevious}
         onClickNext={this.gotoNext}
@@ -23,4 +62,4 @@ class EvictionPhotos extends React.Component {
   }
 }
 
-export default EvictionPhotos;
+export default StoryLightbox;

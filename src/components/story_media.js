@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import YouTube from "react-youtube";
-import Lightbox from "react-images";
+import StoryLightbox from "./lightbox";
 
 class StoryMedia extends React.Component {
   render () {
@@ -17,12 +17,8 @@ class StoryMedia extends React.Component {
     let images = [];
     this.props.story.images.map( image => images.push({src: image}) )
     return (
-      <Lightbox
+      <StoryLightbox
         images={images}
-        isOpen={this.state.lightboxIsOpen}
-        onClickPrev={this.gotoPrevious}
-        onClickNext={this.gotoNext}
-        onClose={this.closeLightbox}
       />
     );
   }
