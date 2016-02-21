@@ -1,6 +1,6 @@
 import { photos } from "../images/images";
 
-var tenantAssociations = [
+var eastBostonStories = [
   {
     address: "173-177 Maverick St.",
     title: "173-177 Maverick St.",
@@ -131,4 +131,4 @@ cc’d: Sheila A. Dillon, Chief and Director Department of Neighborhood Developm
   }
 ]
 
-export default tenantAssociations;
+export default eastBostonStories;
