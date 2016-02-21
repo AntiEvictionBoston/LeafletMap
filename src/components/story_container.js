@@ -19,7 +19,7 @@ class StoryContainer extends React.Component {
     return (
       <div className="story-container">
         <StoryContainerNav
-          address={this.props.story.address}
+          title={this.props.story.title}
           focusedStory={this.props.focusedStory}
           lastStory={this.props.stories.length - 1}
           setFocus={this.props.setFocus} />

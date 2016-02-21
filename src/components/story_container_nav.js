@@ -7,7 +7,7 @@ class StoryContainerNav extends React.Component {
   }
 
   static propTypes = {
-    address:        React.PropTypes.string.isRequired,
+    title:          React.PropTypes.string.isRequired,
     focusedStory:   React.PropTypes.number.isRequired,
     lastStory:      React.PropTypes.number.isRequired,
     setFocus:       React.PropTypes.func.isRequired
@@ -17,8 +17,8 @@ class StoryContainerNav extends React.Component {
     return (
       <div id="location-header">
         {this.renderPreviousButton()}
-        <h2 id="address">
-          {this.props.address}
+        <h2 id="title">
+          {this.props.title}
         </h2>
         {this.renderNextButton()}
       </div>
