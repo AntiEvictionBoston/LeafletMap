@@ -4,7 +4,12 @@
 @media screen and (max-width: 768px){
   #map-container {
     #map-sidebar {
+      height: 66vh;
     }
+  }
+
+  .leaflet-container {
+    height: 33vh;
   }
 }
 
