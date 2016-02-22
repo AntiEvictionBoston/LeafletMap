@@ -23,7 +23,9 @@ class StoryContainer extends React.Component {
           focusedStory={this.props.focusedStory}
           lastStory={this.props.stories.length - 1}
           setFocus={this.props.setFocus} />
-        <StoryContent {...this.props} />
+        <div className="story-content-wrapper">
+          <StoryContent {...this.props} />
+        </div>
       </div>
     );
   }

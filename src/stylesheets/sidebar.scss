@@ -1,5 +1,6 @@
 #location-header {
   padding-top: 10px;
+  height: 4em;
 
   #left-nav-button {
     float: left;
@@ -26,19 +27,31 @@
   }
 }
 
-#story-content {
-  padding-top: 10px;
+#map-sidebar {
+  position: relative;
+}
 
-  .video-container {
-    width: 100%;
+.story-content-wrapper {
+  top: 4em;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+}
+
+#story-content {
+  margin: 0;
+  padding: 0;
+}
+
+// mobile specific styling
+@media screen and (max-width: 768px){
+  #story-content {
+    padding-left: 15px;
   }
 }
 
-.react-sanfona-item-title {
-  font-weight: 600;
-  font-size: 20px;
-  border-bottom-width: 1px;
-  border-bottom-color: #F2F2F2;
-
-
+.video-container {
+  width: 100%;
 }
