@@ -1,7 +1,9 @@
+@import "colorscheme";
+
 #location-header {
   padding-top: 10px;
   height: 3.5em;
-  background-color: #CC0000;
+  background-color: $red-background;
 
   #left-nav-button {
     float: left;
@@ -19,16 +21,16 @@
     width: 78%;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #FFFFFF;
+    color: $font-white;
   }
 
   i {
     display: inline-block;
-    color: #FFFFFF;
+    color: $font-white;
   }
 
   .disabled {
-    color: #d3cdcd !important;
+    color: $disabled !important;
   }
 }
 
