@@ -3,7 +3,7 @@
 #location-header {
   padding-top: 10px;
   height: 3.5em;
-  background-color: $red-background;
+  background-color: $eviction-red;
 
   #left-nav-button {
     float: left;
@@ -53,19 +53,25 @@
   padding-left: 15px;
   padding-right: 15px;
 
+  $table-border-style: 1px solid $background-grey;
+
   table#story-basic-info {
     width: 100%;
     border-collapse: collapse;
 
     tr {
-      border-top: 1px solid black;
-      border-bottom: 1px solid black;
+      border-top: $table-border-style;
+      border-bottom: $table-border-style;
+
+      td {
+        border-right: $table-border-style;
+      }
+      td:last-child {border-right: none; }
     }
-    tr:first-child {
-      border-top: none;
-    }
-    tr:last-child {
-      border-bottom: none;
+    tr:first-child { border-top: none; }
+    tr:last-child { border-bottom: none; }
+    #rent-row {
+      color: $eviction-red;
     }
   }
 }
