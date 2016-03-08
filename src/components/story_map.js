@@ -5,7 +5,7 @@ import Sidebar from "./sidebar";
 import { setFocusedStory } from "../actions/actions";
 import StoryMarkers from "../components/story_markers";
 import StoryContainer from "../components/story_container";
-import { eagerLoadImages } from "../images/images";
+import Images from "../images/images";
 
 class StoryMap extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class StoryMap extends React.Component {
   };
 
   componentWillMount () {
-    eagerLoadImages();
+    Images.eagerLoad();
   }
 
   refreshStoryMap () {

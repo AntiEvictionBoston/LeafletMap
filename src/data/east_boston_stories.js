@@ -1,4 +1,4 @@
-import { photos } from "../images/images";
+import Images from "../images/images";
 
 var eastBostonStories = [
   {
@@ -9,7 +9,7 @@ var eastBostonStories = [
     Latitude: 42.369521,
     Longitude: -71.037244,
     images: [
-      photos.maverickStreet17
+      Images.images.maverickStreet17
     ],
     video: "uinevl-LnTI"
   },
@@ -21,8 +21,8 @@ var eastBostonStories = [
     Latitude: 42.370093,
     Longitude: -71.033843,
     images: [
-      photos.goveStreetMailbox,
-      photos.goveStreet
+      Images.images.goveStreetMailbox,
+      Images.images.goveStreet
     ],
     tenantAssociationLetter: ``
   },
@@ -34,7 +34,7 @@ var eastBostonStories = [
     Latitude: 42.370724,
     Longitude: -71.033808,
     images: [
-      photos.lubecStreet
+      Images.images.lubecStreet
     ]
   },
   {
@@ -45,7 +45,7 @@ var eastBostonStories = [
     Latitude: 42.368669,
     Longitude: -71.035611,
     images: [
-      photos.maverickStreet21
+      Images.images.maverickStreet21
     ]
   },
   {
@@ -56,8 +56,8 @@ var eastBostonStories = [
     Latitude: 42.378119,
     Longitude: -71.033425,
     images: [
-      photos.saratogaPorch,
-      photos.saratogaStreet
+      Images.images.saratogaPorch,
+      Images.images.saratogaStreet
     ]
   },
   {
@@ -68,7 +68,7 @@ var eastBostonStories = [
     Latitude: 42.370697,
     Longitude: -71.037756,
     images: [
-      photos.chelseaStreet25
+      Images.images.chelseaStreet25
     ]
   },
   {
@@ -79,7 +79,7 @@ var eastBostonStories = [
     Latitude: 42.387102,
     Longitude: -71.006143,
     images: [
-      photos.benningtonSt
+      Images.images.benningtonSt
     ]
   },
   {
@@ -90,7 +90,7 @@ var eastBostonStories = [
     Latitude: 42.378097,
     Longitude: -71.029607,
     images: [
-      photos.chelseaStreet35
+      Images.images.chelseaStreet35
     ]
   },
   {
@@ -101,7 +101,7 @@ var eastBostonStories = [
     Latitude: 42.377834,
     Longitude: -71.034292,
     images: [
-      photos.brooksSt
+      Images.images.brooksSt
     ]
   }
 ]
