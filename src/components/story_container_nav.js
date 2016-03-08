@@ -28,24 +28,24 @@ class StoryContainerNav extends React.Component {
   renderPreviousButton () {
     if ( this.props.focusedStory !== 0 ) {
       return (
-        <i className="fa fa-chevron-left fa-3x"
+        <i className="fa fa-angle-left fa-3x"
           id="left-nav-button"
           onClick={this.props.setFocus.bind(this, this.props.focusedStory - 1)} />
       );
     } else {
-      return ( <i className="fa fa-chevron-left fa-3x disabled" id="left-nav-button" /> );
+      return ( <i className="fa fa-angle-left fa-3x disabled" id="left-nav-button" /> );
     }
   }
 
   renderNextButton () {
     if ( this.props.focusedStory !== this.props.lastStory ) {
       return (
-        <i className="fa fa-chevron-right fa-3x" 
+        <i className="fa fa-angle-right fa-3x" 
           id="right-nav-button"
           onClick={this.props.setFocus.bind(this, this.props.focusedStory + 1)} />
       );
     } else {
-      return ( <i className="fa fa-chevron-right fa-3x disabled" id="right-nav-button" /> );
+      return ( <i className="fa fa-angle-right fa-3x disabled" id="right-nav-button" /> );
     }
   }
 }
