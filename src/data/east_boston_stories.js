@@ -9,7 +9,7 @@ var eastBostonStories = [
     Latitude: 42.369521,
     Longitude: -71.037244,
     images: [
-      photos.maverickStreet173
+      photos.maverickStreet17
     ],
     video: "uinevl-LnTI"
   },
@@ -45,7 +45,7 @@ var eastBostonStories = [
     Latitude: 42.368669,
     Longitude: -71.035611,
     images: [
-      photos.maverickStreet219
+      photos.maverickStreet21
     ]
   },
   {
@@ -90,7 +90,7 @@ var eastBostonStories = [
     Latitude: 42.378097,
     Longitude: -71.029607,
     images: [
-      photos.chelseaStreet354
+      photos.chelseaStreet35
     ]
   },
   {
