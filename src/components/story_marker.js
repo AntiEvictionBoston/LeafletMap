@@ -6,6 +6,8 @@ import * as actions from "../actions/actions";
 class StoryMarker extends React.Component {
   constructor(props) {
     super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.isActive = this.isActive.bind(this);
   }
 
   static propTypes = {
@@ -18,9 +20,16 @@ class StoryMarker extends React.Component {
   render() {
     return (
       <Marker
+        icon={this.pickIcon()}
         onClick={this.handleClick}
         map={this.props.map}
         position={this.storyLocation()} />
+    );
+  }
+
+  faIcon (icon, color) {
+    return L.AwesomeMarkers.icon(
+      { icon: icon, prefix: 'fa', markerColor: color }
     );
   }
 
@@ -28,11 +37,14 @@ class StoryMarker extends React.Component {
     this.isActive() ? this.activeIcon() : this.inactiveIcon()
   );
 
+  activeIcon = () => this.faIcon('home', 'red');
+  inactiveIcon = () => this.faIcon('home', 'blue');
+
   isActive = () => (
     this.props.currentUrl === this.props.urlForStory
   );
 
-  handleClick = () => hashHistory.push(this.props.url);
+  handleClick = () => hashHistory.push(this.props.urlForStory);
 
   storyLocation () {
     let {Latitude, Longitude} = this.props.story;

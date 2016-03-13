@@ -8,7 +8,7 @@
 
 /*global L*/
 
-(function (window, document, undefined) {
+function awesomeMarkers (window, document, undefined) {
     "use strict";
     /*
      * Leaflet.AwesomeMarkers assumes that you have already included the Leaflet library.
@@ -119,7 +119,7 @@
         return new L.AwesomeMarkers.Icon(options);
     };
 
-}(this, document));
+}
 
 
-
+export default awesomeMarkers;

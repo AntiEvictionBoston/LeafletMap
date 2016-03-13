@@ -13,10 +13,6 @@ class StoryMarkers extends React.Component {
     map:      React.PropTypes.object
   };
 
-  componentWillMount () {
-    console.log(this.props.url);
-  }
-
   render () {
     let markers = [];
     Object.keys(this.props.stories).forEach((k,i) => {

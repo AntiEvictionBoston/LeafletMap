@@ -8,6 +8,7 @@ import StoryMap from "components/story_map";
 import eastBostonStories from "./data/east_boston_stories";
 import updateMapState from "./reducers/reducers";
 import * as actions from "./actions/actions";
+import awesomeMarkers from "./util/leaflet.awesome-markers";
 require("./stylesheets/main.scss");
 
 // check for different divs, render the appropriate map
@@ -19,6 +20,8 @@ if (domElement) {
   store.dispatch(actions.setFocusedStory(0));
   store.dispatch(actions.setZoomLevel(14));
   store.dispatch(actions.setCenter([42.37, -71.03]));
+
+  awesomeMarkers(this, document);
 
   render(
     <Provider store={store}>
