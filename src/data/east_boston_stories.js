@@ -95,8 +95,8 @@ let eastBostonStories = {
     Latitude: 42.347993,
     Longitude: -71.063258,
     images: [
-      Images.images.johnny11,
       Images.images.johnny12,
+      Images.images.johnny11,
     ],
   },
   "beach_st_1": {
