@@ -15,11 +15,16 @@ class StoryContainer extends React.Component {
     prev:       React.PropTypes.string
   };
 
+  componentWillReceiveProps () {
+    document.getElementById('story-scroll').scrollIntoView();
+  }
+
   render () {
     return (
       <div className="story-container">
         <StoryContainerNav {...this.props} />
         <div className="story-content-wrapper">
+          <div id="story-scroll"></div>
           {this.pickContentWrapper()}
         </div>
       </div>
