@@ -17,15 +17,17 @@ class StoryMarkers extends React.Component {
     let markers = [];
     Object.keys(this.props.stories).forEach((k,i) => {
       let story = this.props.stories[k]
-      markers.push(
-        <StoryMarker
-          map={this.props.map}
-          currentUrl={this.props.url}
-          story={story}
-          urlForStory={k}
-          key={i}>
-        </StoryMarker>
-      );
+      if ( story.Latitude && story.Longitude ) {
+        markers.push(
+          <StoryMarker
+            map={this.props.map}
+            currentUrl={this.props.url}
+            story={story}
+            urlForStory={k}
+            key={i}>
+          </StoryMarker>
+        );
+      }
     });
     return (
       <div id="markers">

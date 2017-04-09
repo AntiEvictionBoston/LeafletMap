@@ -28,16 +28,18 @@ class StoryMedia extends React.Component {
 
   renderImages () {
     let images = [];
-    if ( this.props.story.images.length > 0 ) {
-      this.props.story.images.forEach((image, index) => (
-        images.push (
-          <div
-            className={"row media-row " + this.setHidingState(index)}
-            key={index}>
-            <img src={image} />
-          </div>
-        )
-      ));
+    if ( this.props.story.images ) {
+      if ( this.props.story.images.length > 0 ) {
+        this.props.story.images.forEach((image, index) => (
+          images.push (
+            <div
+              className={"row media-row " + this.setHidingState(index)}
+              key={index}>
+              <img src={image} />
+            </div>
+          )
+        ));
+      }
     }
     if ( images.length > 1 ) {
       images.push(this.showMoreImagesButton(images.length + 1));

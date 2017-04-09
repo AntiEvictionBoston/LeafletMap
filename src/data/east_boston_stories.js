@@ -1,6 +1,11 @@
 import Images from "../images/images";
 
 let eastBostonStories = {
+  "introduction": {
+    story: `This interactive map of Boston renters’ stories tells a tale of evictions and displacement in our increasingly upscale rental market. Who is getting pushed out as rents rise and higher-income earners move in? These stories don’t represent the scale of no-fault evictions in Boston (complete and accurate data on no-fault evictions not possible to represent at this time), but they begin to illuminate the human impact.* Also, this small sampling of stories is just the start of this project - share your story through the form on this site, and we’ll put you on the map.
+
+    *Pins on map don’t represent exact addresses of tenants but do denote the streets where stories took place.`
+  },
   "east_boston": {
     title: "East Boston",
     type: "neighborhood",
