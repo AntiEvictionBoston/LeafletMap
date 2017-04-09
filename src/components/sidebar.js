@@ -1,7 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import StoryContainer from "./story_container";
-import { hashHistory } from "react-router";
+import { browserHistory } from "react-router";
 
 class Sidebar extends React.Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class Sidebar extends React.Component {
     if ( addresses.includes(this.props.address)) {
       return this.props.address;
     } else {
-      hashHistory.push(addresses[0]);
+      browserHistory.push(addresses[0]);
       return addresses[0];
     }
   }

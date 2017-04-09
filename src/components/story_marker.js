@@ -1,5 +1,5 @@
 import React from "react";
-import { hashHistory } from "react-router";
+import { browserHistory } from "react-router";
 import { Marker } from "react-leaflet";
 import * as actions from "../actions/actions";
 
@@ -48,7 +48,7 @@ class StoryMarker extends React.Component {
     this.props.currentUrl === this.props.urlForStory
   );
 
-  handleClick = () => hashHistory.push(this.props.urlForStory);
+  handleClick = () => browserHistory.push(this.props.urlForStory);
 
   storyLocation () {
     let {Latitude, Longitude} = this.props.story;

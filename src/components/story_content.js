@@ -7,9 +7,7 @@ class StoryContent extends React.Component {
     return (
       <div id="story-content">
         {this.basicInfo()}
-
         <StoryMedia {...this.props} />
-        
         {this.callToAction()}
       </div>
     );
@@ -39,7 +37,7 @@ class StoryContent extends React.Component {
       </table>
     );
   }
-  
+
   callToAction () {
     return (
       <div className="call-to-action">

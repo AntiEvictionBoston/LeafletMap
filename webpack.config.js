@@ -57,7 +57,7 @@ module.exports = {
     modulesDirectories: ['node_modules', 'src']
   },
   output: {
-    path: __dirname,
+    path: __dirname + '/build',
     filename: 'maps.js',
   },
   module: {

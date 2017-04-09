@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "react-dom";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
-import { Router, Route, hashHistory } from "react-router";
+import { Router, Route, browserHistory } from "react-router";
 
 import arrayIncludesPolyfill from "./util/array_includes";
 import StoryMap from "components/story_map";
@@ -28,7 +28,7 @@ if (domElement) {
 
   render(
     <Provider store={store}>
-      <Router history={hashHistory}>
+      <Router history={browserHistory}>
         <Route path="/" component={StoryMap}>
           <Route path="/:address" />
         </Route>
