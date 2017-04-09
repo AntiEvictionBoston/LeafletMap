@@ -21,7 +21,7 @@ class StoryContent extends React.Component {
         <tbody>
           <tr id="rent-row" className="row">
             <td id="rent-col-one" className="cell">
-              Rent <i className="fa fa-arrow-up"></i>
+              Latest Rent <i className="fa fa-arrow-up"></i>
             </td>
             <td id="rent-col-two" className="cell">
               {this.props.story.rent}
